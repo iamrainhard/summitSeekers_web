@@ -100,6 +100,8 @@ function showMiniTab(tabId) {
         selectedTab.classList.add("active")
     }
 
+    
+
     // Activate the clicked tab link
     event.target.classList.add("active");
 }

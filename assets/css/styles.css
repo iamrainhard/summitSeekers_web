@@ -3236,6 +3236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-summary > .header {
+  position: relative;
   padding: 0 20px;
 }
 
@@ -3247,11 +3248,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.travel-guide-area-summary > .header > .coord {
+.travel-guide-area-summary .header .coord {
   margin-bottom: 20px;
   font-family: "Plaid XL",Arial,Helvetica,sans-serif;
   font-size: 14px;
-  color: #0f1923;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -3261,9 +3262,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 
-.travel-guide-area-summary > .header > .heading {
+.travel-guide-area-summary .header .heading {
   font-family: "Plaid XL",Arial,Helvetica,sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -3272,7 +3273,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.travel-guide-area-summary > .header > .intro {
+.travel-guide-area-summary .header .intro {
   text-align: center;
   max-width: 750px;
   margin: 0 auto;
@@ -3302,7 +3303,7 @@ h1, h2, h3, h4, h5, h6 {
 .travel-guide-area-summary > .country > .info > .value {
   font-family: "Plaid XL",Arial,Helvetica,sans-serif;
   font-size: 30px;
-  color: #0f1923;
+  color: #000;
   text-transform: uppercase;
   line-height: 1.25;
   color: #383e3a;
@@ -3484,13 +3485,13 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin: 25px auto;
   padding-bottom: 5px;
-  color: #0f1923;
+  color: #000;
   text-decoration: none;
   font-family: "Plaid XL",Arial,Helvetica,sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: solid 3px #0f1923;
+  border-bottom: solid 3px #000;
   -webkit-transition: all .25s;
   -o-transition: all .25s;
   transition: all .25s;
@@ -3581,7 +3582,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-summary > .agency > .inner > .team > .actions > .action:hover {
-  background-color: #0f1923;
+  background-color: #000;
 }
 
 .travel-guide-area-summary > .agency > .inner > .team > .actions > .action.is-disabled {
@@ -3685,7 +3686,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-summary > .places > .actions > .action:hover {
-  background-color: #0f1923;
+  background-color: #000;
 }
 
 .travel-guide-area-summary > .places > .actions > .action.is-disabled {
@@ -3732,13 +3733,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   line-height: 1.25;
   font-size: 8px;
-  color: #0f1923;
+  color: #000;
 }
 
 .travel-guide-area-summary-agency-expert > .presentation > .name {
   font-family: "Plaid XL",Arial,Helvetica,sans-serif;
   font-size: 16px;
-  color: #0f1923;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -3799,7 +3800,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.25;
-  color: #0f1923;
+  color: #000;
   margin-bottom: 20px;
 }
 
@@ -3923,6 +3924,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: filter .25s;
   transition: filter .25s;
   transition: filter .25s, -webkit-filter .25s;
+  border-radius: .175rem;
 }
 
 .travel-guide-area-summary-photos > .inner > .list > .item > .link > img:hover {
@@ -4006,5 +4008,346 @@ h1, h2, h3, h4, h5, h6 {
     width: calc(2*var(--travel-guide-area-summary-photos-item-width) + 16px);
     height: calc(2*var(--travel-guide-area-summary-photos-item-height) + 16px);
   }
+}
+
+.travel-guide-area-summary > .header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../assets/img/contours2.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.travel-guide-area-period {
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+@media (min-width: 1160px) {
+  .travel-guide-area-period {
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+
+.travel-guide-area-period > .heading {
+  text-align: center;
+}
+
+.travel-guide-area-period > .heading > .area {
+  display: block;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #4376ab;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.travel-guide-area-period > .heading > .name {
+  display: block;
+  font-family: "HK Grotesk",Arial,Helvetica,sans-serif;
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.travel-guide-area-period > .seasons {
+  margin-top: 70px;
+}
+
+.travel-guide-area-period > .seasons > .season {
+  margin: 0 auto 50px;
+}
+
+@media (min-width: 750px) {
+  .travel-guide-area-period > .seasons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 750px) {
+  .travel-guide-area-period > .seasons > .season {
+    width: 48%;
+    margin: 0 0 50px;
+  }
+}
+
+.travel-guide-area-period > .climate {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.travel-guide-area-period > .climate > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #4376ab;
+}
+
+.travel-guide-area-period > .climate > .key {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.travel-guide-area-period > .climate > .list > .location {
+  margin: 50px 0;
+}
+
+@media (min-width: 1160px) {
+  .travel-guide-area-period > .climate {
+    margin-top: 70px;
+    text-align: left;
+  }
+}
+
+.travel-guide-area-period > .holidays {
+  margin-top: 140px;
+}
+
+.travel-guide-area-period > .holidays > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #4376ab;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: 1160px) {
+  .travel-guide-area-period > .holidays > .heading {
+    text-align: left;
+  }
+}
+
+@media (min-width: 750px) {
+  .travel-guide-area-period > .holidays > .list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 100px;
+    -moz-column-gap: 100px;
+    column-gap: 100px;
+  }
+}
+
+.travel-guide-area-period > .holidays > .list > .holiday {
+  margin-bottom: 70px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.travel-guide-area-period-season {
+  max-width: 540px;
+}
+
+.travel-guide-area-period-season > .photo > img {
+  max-width: 100%;
+}
+
+.travel-guide-area-period-season > .heading {
+  margin: 10px 0;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  font-size: 16px;
+  color: #000;
+}
+
+.travel-guide-area-period-season > .descr {
+  color: grey;
+}
+
+.travel-guide-area-period-location > .heading {
+  margin-bottom: 10px;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.travel-guide-area-period-location > .table {
+  width: 100%;
+}
+
+.travel-guide-area-period-location-head-row > th {
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #000;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 10px;
+  color: #383e3a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.travel-guide-area-period-location-head-row > th + th {
+  width: 8.33333%;
+}
+
+.travel-guide-area-period-location-data-row > th {
+  height: 50px;
+  padding: 10px 20px;
+  vertical-align: middle;
+  background-color: #faf7f2;
+  border-bottom: solid 1px #dbd9d2;
+  line-height: 1.25;
+}
+
+.travel-guide-area-period-location-data-row > th > .label, .travel-guide-area-period-location-data-row > th > .unit {
+  display: block;
+  font-size: .9em;
+  white-space: nowrap;
+}
+
+.travel-guide-area-period-location-data-row > th > .label {
+  font-weight: 700;
+}
+
+.travel-guide-area-period-location-data-row > td {
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: solid 1px #dbd9d2;
+}
+
+.travel-guide-area-period-location-data-row > td > .temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #efdbc8;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.travel-guide-area-period-location-data-row > td > .precipitation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 12px;
+  position: relative;
+}
+
+.travel-guide-area-period-location-data-row > td > .precipitation:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--pcpn-height);
+  background-color: #caf0f6;
+  z-index: -1;
+}
+
+.travel-guide-area-period-location-data-row.is-responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.travel-guide-area-period-location-data-row.is-responsive > th {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.travel-guide-area-period-location-data-row.is-responsive > td {
+  -ms-flex-preferred-size: 150px;
+  flex-basis: 150px;
+}
+
+.travel-guide-area-period-location-data-row.is-responsive > td:before {
+  display: block;
+}
+
+.travel-guide-area-period-holiday {
+  position: relative;
+  padding-left: 28px;
+}
+
+.travel-guide-area-period-holiday:before {
+  content: url("travel-guide-area-period-holiday-bullet.png");
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.travel-guide-area-period-holiday > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.travel-guide-area-period-holiday > .period {
+  margin: 5px 0;
+  color: #4376ab;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.travel-guide-area-period-holiday > .descr {
+  color: grey;
 }
 
