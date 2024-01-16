@@ -113,4 +113,6 @@ setInterval(() => {
     
     // Display the time in the 'HH:mm' format
     document.getElementById('tanzania-time').innerText = tanzaniaTime.format('HH:mm');
+    
+    document.getElementById('travel-guide-area-practical-localtime').innerText = tanzaniaTime.format('HH:mm:ss');
   }, 1000);
