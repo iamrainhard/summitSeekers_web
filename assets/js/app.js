@@ -80,3 +80,35 @@ function showTab(tabId) {
     // Activate the clicked tab link
     event.target.classList.add("active");
 }
+
+function showMiniTab(tabId) {
+    // Hide all tabs
+    var tabs = document.getElementsByClassName("minitab_content");
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+
+    // Deactivate all tab links
+    var tabLinks = document.getElementsByClassName("minitablink");
+    for (var i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+    }
+
+    // Show the selected tab
+    var selectedTab = document.getElementById(tabId);
+    if (selectedTab) {
+        selectedTab.classList.add("active")
+    }
+
+    // Activate the clicked tab link
+    event.target.classList.add("active");
+}
+
+
+setInterval(() => {
+    // Set the timezone to 'Africa/Dar_es_Salaam' (Tanzania)
+    const tanzaniaTime = moment().tz('Africa/Dar_es_Salaam');
+    
+    // Display the time in the 'HH:mm' format
+    document.getElementById('tanzania-time').innerText = tanzaniaTime.format('HH:mm');
+  }, 1000);
