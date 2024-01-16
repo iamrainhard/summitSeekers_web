@@ -4323,7 +4323,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-period-holiday:before {
-  content: url("travel-guide-area-period-holiday-bullet.png");
+  content: url("../../assets/img/travel-guide-area-period-holiday-bullet.png");
   display: block;
   width: 12px;
   height: 12px;
@@ -4540,7 +4540,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-practical > .info > .intro > .time:before {
-  content: url("travel-guide-area-practical-intro-time-circle.png");
+  content: url("/assets/img/travel-guide-area-practical-intro-time-circle.png");
   width: 100%;
   height: 100%;
   display: block;
