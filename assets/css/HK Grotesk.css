@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'HK Grotesk';
+	src: url(../../assets/fonts/HK%20Grotesk-95550fa8fe9610df9234d87383420cf2.woff2) format('woff2'),
+	url(../../assets/fonts/HK%20Grotesk-bca669739ee33a383e5ce53ce95af186.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'HK Grotesk';
+	src: url(../../assets/fonts/HK%20Grotesk-a9b35a14509349cc662f4096349b2197.woff2) format('woff2'),
+	url(../../assets/fonts/HK%20Grotesk-098cb988ac3453b1ce5ea1f6727bac76.woff) format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}

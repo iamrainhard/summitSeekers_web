@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Plaid XL';
+	src: url(../../assets/fonts/Plaid%20XL-c1ac930f7c409bfc887089f91a36f68e.woff2) format('woff2'),
+	url(../../assets/fonts/Plaid%20XL-567e977558183fcf2ef0c9de9e3b60b1.woff) format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
