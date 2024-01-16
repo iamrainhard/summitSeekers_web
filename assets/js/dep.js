@@ -6732,10 +6732,10 @@ function(m, v) {
                 t.preventDefault(),
                 f(m(this).closest(".item"))
             }),
-            m(".destination > .link", i).on("click", function(t) {
-                t.preventDefault(),
-                p(m(this).closest(".destination"))
-            }),
+            // m(".destination > .link", i).on("click", function(t) {
+            //     t.preventDefault(),
+            //     p(m(this).closest(".destination"))
+            // }),
             c.on("click", ".region", function(t) {
                 t.preventDefault();
                 var e = m(this).attr("id").replace(/^worldmap-/, "");
