@@ -5044,3 +5044,77 @@ h1, h2, h3, h4, h5, h6 {
   color: #4376ab;
 }
 
+.flat-error-content {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+@media (min-width: 1160px) {
+  .flat-error-content {
+    width: 1160px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
+.flat-error-content > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 30px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.flat-error-content > .text {
+  margin: 20px 0 30px;
+}
+
+.flat-error-content > .homebtn > .link {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+.flat-error-content > .homebtn > .link:hover {
+  text-decoration: none;
+}
+
+.flat-error-content > .homebtn > .link {
+  padding: 15px 20px;
+  background-color: #4376ab;
+  color: #fff;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+  border-radius: .187rem;
+}
+
+.flat-error-content > .homebtn > .link:hover {
+  background-color: #000;
+  -webkit-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s;
+}
+
+.flat-error-content > .homebtn > .link {
+  padding: 20px 40px;
+}
+
