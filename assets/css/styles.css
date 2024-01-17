@@ -4972,3 +4972,30 @@ h1, h2, h3, h4, h5, h6 {
   list-style-type: square;
 }
 
+.form-group {
+  display: flex;
+}
+
+.field {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .field {
+    width: 50%;
+  }
+}
+
+.form-label span {
+  color: red;
+}
+
+.form-label {
+  font-weight: 700;
+}
+
+.form-control, .form-select {
+  padding: 1rem;
+  border-radius: .375rem;
+}
+
