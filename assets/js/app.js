@@ -116,3 +116,38 @@ setInterval(() => {
     
     document.getElementById('travel-guide-area-practical-localtime').innerText = tanzaniaTime.format('HH:mm:ss');
   }, 1000);
+
+
+$(document).ready(function () {
+    // Function to update the price per person based on the selected number
+    function updatePrice() {
+        var selectedNumber = $('#numberOfPeople').val();
+
+        // Check if the element exists before trying to update
+        if ($('#hiddenInput7Day').length) {
+            var prices7Day = JSON.parse($('#hiddenInput7Day').attr('data-pax'));
+            $('#pricePerPerson7Day').text('$' + prices7Day.pax[selectedNumber]);
+        }
+
+        if ($('#hiddenInput8Day').length) {
+            var prices8Day = JSON.parse($('#hiddenInput8Day').attr('data-pax'));
+            $('#pricePerPerson8Day').text('$' + prices8Day.pax[selectedNumber]);
+        }
+
+        if ($('#hiddenInput9Day').length) {
+            var prices9Day = JSON.parse($('#hiddenInput9Day').attr('data-pax'));
+            $('#pricePerPerson9Day').text('$' + prices9Day.pax[selectedNumber]);
+        }
+
+        if ($('#hiddenInput10Day').length) {
+            var prices10Day = JSON.parse($('#hiddenInput10Day').attr('data-pax'));
+            $('#pricePerPerson10Day').text('$' + prices10Day.pax[selectedNumber]);
+        }
+    }
+
+    // Attach the updatePrice function to the change event of the select element
+    $('#numberOfPeople').change(updatePrice);
+
+    // Trigger the updatePrice function on page load
+            updatePrice();
+        });
