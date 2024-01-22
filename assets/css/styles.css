@@ -1326,7 +1326,7 @@ body {
 
 .brand_logo {
   width: 180px;
-  height: 90px;
+  height: 120px;
 }
 
 .hovertip-content {
@@ -1552,7 +1552,8 @@ h1, h2, h3, h4, h5, h6 {
 .home_intro {
   margin-top: 100px;
   position: relative;
-  z-index: 100;
+  /*z-index: 100;*/
+  margin-bottom: 120px;
 }
 
 @media (min-width: 768px) {
@@ -1624,7 +1625,6 @@ h1, h2, h3, h4, h5, h6 {
   .figures > .figure {
     display: inline-block;
     vertical-align: top;
-    max-width: 120px;
     margin-top: 0;
     text-align: left;
   }
@@ -1679,12 +1679,12 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   display: block;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 200px;
   width: 80%;
   height: 80%;
-  background: url(../../assets/img/contours.webp) no-repeat left center transparent;
-  z-index: 2;
+  background: url(../../assets/img/flat-home-intro-map.png) no-repeat right center transparent;
+  z-index: -100;
   background-size: contain;
 }
 
@@ -1696,6 +1696,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .routes_sec {
   position: relative;
+  margin-bottom: 120px;
 }
 
 .routes_sec_single_route {
@@ -1957,6 +1958,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   height: 80vh;
+  margin-bottom: 120px;
 }
 
 .reviews_sec .photo {
@@ -1996,7 +1998,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../assets/img/contours2.webp");
+  background: url("../../assets/img/flat-home-intro-map.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2082,7 +2084,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .front-footer-nav {
-  padding: 70px 25px;
+  padding: 70px 25px 0 25px;
   background: #000;
   color: #fff;
 }
@@ -2349,7 +2351,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .front-footer-bobby {
-  padding: 70px 25px;
+  padding: 0px 25px;
   margin: 0;
   background-color: #000;
   color: #fff;
@@ -2645,6 +2647,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   flex-direction: column;
   padding: 2rem;
+  margin-bottom: 120px;
 }
 
 .tab_content .heading > h1 {
@@ -2659,6 +2662,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 70px;
   padding: 80px 0;
   background-color: #000;
+  margin-bottom: 120px;
 }
 
 .team_word h3 {
@@ -8049,5 +8053,58 @@ h1, h2, h3, h4, h5, h6 {
 .currency-controls .currency-controls__control:last-child {
   border-radius: .187rem;
   margin-right: 0;
+}
+
+#front-footer {
+  background: #000;
+}
+
+.flat-about-area-history-periods {
+  margin-top: 70px;
+}
+
+.flat-about-area-history-periods > .list {
+  padding: 0 20px;
+}
+
+@media (min-width: 1160px) {
+  .flat-about-area-history-periods > .list {
+    width: 1160px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.flat-about-area-history-periods > .list > .period + .period {
+  margin-top: 70px;
+}
+
+.flat-about-area-history-periods > .list > .period > .photo {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.flat-about-area-history-periods > .list > .period > .photo > img {
+  max-width: 100%;
+  width: 320px;
+  object-fit: cover;
+}
+
+.flat-about-area-history-periods > .list > .period > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 30px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.why_sec {
+  margin-bottom: 120px;
+}
+
+.difficulty_sec {
+  margin-bottom: 120px;
 }
 
