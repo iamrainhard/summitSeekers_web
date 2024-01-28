@@ -25,10 +25,12 @@ var home_swiper = new Swiper(".swiper-container", {
     loop: false,
         slidesPerView: 1,
         spaceBetween: 30,
+    
         
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
+        clickable: true,
       },
       })
 var routes_sec_swiper = new Swiper(".routes-sec-swiper", {

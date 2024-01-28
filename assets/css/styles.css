@@ -1326,7 +1326,7 @@ body {
 
 .brand_logo {
   width: 180px;
-  height: 120px;
+  height: 80px;
 }
 
 .hovertip-content {
@@ -1426,7 +1426,7 @@ body {
 .routeCard_h {
   font-weight: 700;
   font-family: 'Plaid XL';
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .routeCard_h > small {
@@ -1998,9 +1998,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../assets/img/flat-home-intro-map.png");
-  background-size: cover;
+  background: url("../../assets/img/flat-home-intro-map.png") right center;
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-bottom: 120px;
 }
 
 .cta_sec .photo {
@@ -4993,7 +4994,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.form-label span {
+.form-label span, .form-check-label span {
   color: red;
 }
 
@@ -8106,5 +8107,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .difficulty_sec {
   margin-bottom: 120px;
+}
+
+.modal-footer span {
+  font-size: .8rem;
 }
 
