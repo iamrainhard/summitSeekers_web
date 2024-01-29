@@ -631,6 +631,7 @@ a.default:hover {
   -webkit-transition-property: color,background-color,border;
   -o-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
+  border-radius: .185rem;
 }
 
 .front-banner-quicklinks-tel:hover {
