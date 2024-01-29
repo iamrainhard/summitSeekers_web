@@ -2212,6 +2212,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .front-footer-nav-reviews {
   margin-top: 70px;
+  overflow: hidden;
 }
 
 .front-footer-nav-reviews > .heading {
@@ -8125,5 +8126,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .link {
   border-radius: .187rem;
+}
+
+#TA_selfserveprop956 {
+  border-radius: .185rem;
+}
+
+.huflDf {
+  font-family: 'Plaid XL';
+  text-transform: uppercase;
+}
+
+.euBiGU {
+  padding: 15px 20px !important;
+  background-color: #4376ab !important;
+  color: #fff;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif !important;
+  font-size: 10px !important;
+  text-transform: uppercase;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
