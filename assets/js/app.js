@@ -126,6 +126,11 @@ $(document).ready(function () {
         var selectedNumber = $('#numberOfPeople').val();
 
         // Check if the element exists before trying to update
+        if ($('#hiddenInput6Day').length) {
+            var prices6Day = JSON.parse($('#hiddenInput6Day').attr('data-pax'));
+            $('#pricePerPerson6Day').text('$' + prices6Day.pax[selectedNumber]);
+        }
+        
         if ($('#hiddenInput7Day').length) {
             var prices7Day = JSON.parse($('#hiddenInput7Day').attr('data-pax'));
             $('#pricePerPerson7Day').text('$' + prices7Day.pax[selectedNumber]);
@@ -153,3 +158,82 @@ $(document).ready(function () {
     // Trigger the updatePrice function on page load
             updatePrice();
         });
+
+// Replace with your app id from Open Exchange Rates
+const app_id = "70cadf41e59d4b468faebbc387ae7636";
+
+// The base currency is USD by default
+const base = "USD";
+
+// The target currency is TZS
+const target = "TZS";
+
+// The API endpoint for the latest exchange rates
+const url = `https://openexchangerates.org/api/latest.json?app_id=${app_id}&base=${base}&symbols=${target}`;
+
+// A variable to store the current rate
+let currentRate;
+
+// A function to fetch the data from the API
+async function fetchRate() {
+  try {
+    // Make a GET request to the API
+    const response = await fetch(url);
+
+    // Check if the response is successful
+    if (response.ok) {
+      // Parse the response as JSON
+      const data = await response.json();
+
+      // Extract the rate from the data
+      currentRate = data.rates[target];
+        
+        document.getElementById('travel-guide-area-practical-converter').setAttribute('data-rate', currentRate);
+        
+        convertCurrency('source', 'target');
+
+      // Log the current rate to the console
+      // console.log(`The current exchange rate from ${base} to ${target} is ${currentRate}`);
+    } else {
+      // Throw an error if the response is not successful
+      throw new Error(`The API request failed with status code ${response.status}`);
+    }
+  } catch (error) {
+    // Log the error to the console
+    console.error(error);
+  }
+}
+
+// Call the function to fetch the rate
+fetchRate();
+
+
+// Function to convert currency
+    function convertCurrency(from, to) {
+        // Get the input values
+        var sourceValue = parseFloat(document.querySelector('[name=' + from + ']').value) || 0;
+
+        // Get the conversion rate
+        var conversionRate = parseFloat(document.getElementById('travel-guide-area-practical-converter').getAttribute('data-rate')) || 1;
+
+        // Perform the conversion
+        var targetValue = (from === 'source') ? sourceValue * conversionRate : sourceValue / conversionRate;
+
+        // Update the other input field without decimal points
+        document.querySelector('[name=' + to + ']').value = Math.floor(targetValue);
+    }
+
+
+
+
+    // Trigger conversion on page load
+    convertCurrency('source', 'target');
+
+    // Add event listeners for input changes
+    document.querySelector('[name=source]').addEventListener('input', function() {
+        convertCurrency('source', 'target');
+    });
+
+    document.querySelector('[name=target]').addEventListener('input', function() {
+        convertCurrency('target', 'source');
+    });

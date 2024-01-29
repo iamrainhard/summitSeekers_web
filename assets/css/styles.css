@@ -4640,6 +4640,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
   border: none;
   background-color: #f2f2f2;
+  color: grey;
   font-weight: 700;
 }
 
@@ -8111,5 +8112,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-footer span {
   font-size: .8rem;
+}
+
+.travel-guide-area-practical > .info > .blocks > .block > .content > .converter > .row > .value > .input:focus-visible {
+  outline: none;
+}
+
+.is-rt li {
+  list-style-type: square;
+}
+
+.link {
+  border-radius: .187rem;
 }
 
