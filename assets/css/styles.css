@@ -2074,9 +2074,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .front-footer-logo > .scrolltop > .icon {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  /*-webkit-transform: rotate(90deg);*/
+  /*-ms-transform: rotate(90deg);*/
+  /*transform: rotate(90deg);*/
 }
 
 @media (min-width: 1160px) {
@@ -2650,7 +2650,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   flex-direction: column;
   padding: 2rem;
-  margin-bottom: 120px;
+  /*margin-bottom: 50px;*/
 }
 
 .tab_content .heading > h1 {
@@ -2662,10 +2662,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team_word {
-  margin-top: 70px;
-  padding: 80px 0;
-  background-color: #000;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 }
 
 .team_word h3 {
@@ -2713,7 +2710,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-.team_photo .photo img {
+.team_photo img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2724,15 +2721,15 @@ h1, h2, h3, h4, h5, h6 {
   transition: all .3s ease-in-out;
 }
 
-.team_photo .photo {
+.team_photo {
   position: relative;
-  width: 100%;
-  height: 200px;
+  width: 238px;
+  height: 238px;
   overflow: hidden;
   border-radius: .875rem;
 }
 
-.team_photo:hover .photo > img {
+.team_photo:hover > img {
   transform: scale(1.2);
 }
 
@@ -3866,7 +3863,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .travel-guide-area-summary-photos {
   margin: 70px auto 0;
-  padding: 100px 0;
+  /*padding: 100px 0;*/
   overflow: hidden;
   position: relative;
   background-color: #faf7f2;
@@ -3874,7 +3871,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1160px) {
   .travel-guide-area-summary-photos {
-    padding: 150px 0;
   }
 }
 
@@ -4025,9 +4021,10 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../../assets/img/contours2.webp");
+  background: url("../../assets/img/flat-home-intro-map.png");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: left center;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -4208,7 +4205,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
-.travel-guide-area-period-location > .table {
+.travel-guide-area-period-location > .my-table {
   width: 100%;
 }
 
@@ -4266,7 +4263,8 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-pack: center;
   justify-content: center;
   height: 50px;
-  background-color: #efdbc8;
+  background-color: #4376ab !important;
+  color: #ffffff;
   font-size: 12px;
   white-space: nowrap;
 }
@@ -4325,6 +4323,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .travel-guide-area-period-location-data-row.is-responsive > td:before {
   display: block;
+}
+
+.responsive-table {
+  display: block;
+}
+
+.responsive-table > thead {
+  display: none;
+}
+
+.responsive-table > tbody, .responsive-table > tfoot {
+  display: block;
+}
+
+.responsive-table tr {
+  display: block;
+}
+
+.responsive-table tr + tr {
+  margin-top: 20px;
+}
+
+.responsive-table td, .responsive-table th {
+  display: block;
+  width: auto!important;
+  text-align: center!important;
+}
+
+.responsive-table td[data-th]:before {
+  content: attr(data-th);
+  font-weight: 700;
 }
 
 .travel-guide-area-period-holiday {
@@ -4411,7 +4440,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .travel-guide-area-faq > .section > .questions {
-  display: none;
+  /*display: none;*/
   padding-left: 40px;
 }
 
@@ -4438,10 +4467,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-}
-
-.travel-guide-area-faq > .section.is-visible > .questions {
-  display: block;
 }
 
 .travel-guide-area-practical {
@@ -8147,5 +8172,398 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: background-color .5s;
   -o-transition: background-color .5s;
   transition: background-color .5s;
+}
+
+.flat-team-grid {
+  margin: 0 auto;
+  width: 100%;
+  align-items: end;
+}
+
+.flat-team-grid > .block {
+  max-width: 238px;
+  margin: 0 auto;
+}
+
+.flat-team-grid > .block + .block {
+  margin-top: 20px;
+}
+
+@media (min-width: 500px) {
+  .flat-team-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 500px) {
+  .flat-team-grid > .block {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .flat-team-grid > .block.is-2x1 {
+    grid-column-start: span 2;
+  }
+}
+
+@media (min-width: 500px) {
+  .flat-team-grid > .block + .block {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .flat-team-grid {
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1160px) {
+  .flat-team-grid {
+    grid-template-columns: repeat(4,1fr);
+    gap: 69.33333px;
+  }
+}
+
+.flat-team-grid-actions {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.flat-team-grid-actions > .action {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #4376ab;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 1;
+  -webkit-transition: .25s background-color;
+  -o-transition: .25s background-color;
+  transition: .25s background-color;
+}
+
+.flat-team-grid-actions > .action:hover {
+  background-color: #000;
+}
+
+.flat-team-grid-actions > .action.is-disabled {
+  background-color: #ddd;
+  pointer-events: none;
+}
+
+.flat-team-grid-actions > .action > .icon {
+  width: 100%;
+  height: 100%;
+}
+
+.flat-team-grid-block > .link {
+  display: block;
+  position: relative;
+}
+
+.flat-team-grid-block > .link > img {
+  display: block;
+  width: 100%;
+  -webkit-transition: -webkit-filter .25s;
+  transition: -webkit-filter .25s;
+  -o-transition: filter .25s;
+  transition: filter .25s;
+  transition: filter .25s, -webkit-filter .25s;
+  border-radius: .875rem;
+}
+
+.flat-team-grid-block > .link > .info {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  line-height: 1.25;
+}
+
+.flat-team-grid-block > .link > .info > .name {
+  display: block;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+.flat-team-grid-block > .link > .info > .position {
+  display: block;
+  font-size: 16px;
+  color: grey;
+}
+
+.flat-team-grid-block > .link:hover > img {
+  /*-webkit-filter: blur(2px) brightness(.9);*/
+  /*filter: blur(2px) brightness(.9);*/
+}
+
+.flat-team-grid-block > .link:hover:after {
+  opacity: 1;
+}
+
+.flat-team-experts {
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .flat-team-experts {
+    width: 500px;
+  }
+}
+
+@media (min-width: 750px) {
+  .flat-team-experts {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1160px) {
+  .flat-team-experts {
+    width: 1160px;
+  }
+}
+
+.flat-team-experts > .grid > .header > .heading > .sub {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  color: #4376ab;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  display: block;
+}
+
+.flat-team-experts > .grid > .header > .heading > .title {
+  font-family: "HK Grotesk",Arial,Helvetica,sans-serif;
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.25;
+  display: block;
+  margin: 20px auto 30px auto;
+}
+
+.flat-team-experts > .grid > .header > .intro {
+  color: grey;
+  font-size: 16px;
+}
+
+.main {
+  padding-bottom: 70px;
+}
+
+.flat-about-area-agencies-contact {
+  margin-top: 70px;
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.flat-about-area-agencies-contact > .inner {
+  padding: 0 20px;
+}
+
+@media (min-width: 1160px) {
+  .flat-about-area-agencies-contact > .inner {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+.flat-about-area-agencies-contact > .inner > .word {
+  position: relative;
+  margin-bottom: 70px;
+  color: #fff;
+}
+
+.flat-about-area-agencies-contact > .inner > .word:before {
+  content: "\201c";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -22px;
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: #fff;
+  opacity: .2;
+}
+
+@media (min-width: 750px) {
+  .flat-about-area-agencies-contact > .inner > .word {
+    padding-left: 80px;
+  }
+}
+
+@media (min-width: 750px) {
+  .flat-about-area-agencies-contact > .inner > .word:before {
+    font-size: 120px;
+    top: -16px;
+  }
+}
+
+@media (min-width: 1160px) {
+  .flat-about-area-agencies-contact > .inner > .word {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.flat-about-area-agencies-contact > .inner > .word > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #4376ab;
+  font-size: 11px;
+  margin-bottom: 10px;
+  padding-left: 50px;
+}
+
+@media (min-width: 750px) {
+  .flat-about-area-agencies-contact > .inner > .word > .heading {
+    padding-left: 0;
+  }
+}
+
+.flat-about-area-agencies-contact > .inner > .word > .content {
+  font-size: 18px;
+}
+
+@media (min-width: 500px) {
+  .flat-about-area-agencies-contact > .inner > .word > .content {
+    font-size: 24px;
+  }
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 1160px) {
+  .flat-about-area-agencies-contact > .inner > .agencies {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin: 0 50px 0 0;
+  }
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .list > .agency + .agency {
+  display: none;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions.is-visible {
+  display: block;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions > .action {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #4376ab;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 1;
+  -webkit-transition: .25s background-color;
+  -o-transition: .25s background-color;
+  transition: .25s background-color;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions > .action:hover {
+  background-color: #000000;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions > .action.is-disabled {
+  background-color: #ddd;
+  pointer-events: none;
+}
+
+.flat-about-area-agencies-contact > .inner > .agencies > .actions > .action > .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.flat-about-area-agencies-contact-agency {
+  width: 320px;
+  margin: 0 10px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.flat-about-area-agencies-contact-agency > .heading {
+  font-family: "Plaid XL",Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #4376ab;
+  line-height: 1.25;
+}
+
+.flat-about-area-agencies-contact-agency > .details {
+  margin-top: 20px;
+  color: grey;
+}
+
+.flat-about-area-agencies-contact-agency > .www {
+  margin-top: 20px;
+}
+
+.flat-about-area-agencies-contact-agency > .www > .link {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.flat-about-area-agencies-contact-agency > .www > .link:hover {
+  text-decoration: underline;
+}
+
+#media-modal .modal-content {
+  background: transparent;
+  border: none;
+}
+
+#media-modal .btn-close {
+  color: #ffffff !important;
 }
 

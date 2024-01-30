@@ -22,16 +22,19 @@ window.addEventListener('scroll', () =>{
 })
 
 var home_swiper = new Swiper(".swiper-container", {
-    loop: false,
-        slidesPerView: 1,
-        spaceBetween: 30,
-    
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    effect: 'slide',    
         
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
         clickable: true,
       },
+    autoplay: {
+      delay: 5000, 
+    },
       })
 var routes_sec_swiper = new Swiper(".routes-sec-swiper", {
     loop: true,
@@ -44,6 +47,9 @@ var routes_sec_swiper = new Swiper(".routes-sec-swiper", {
           nextEl: ".routes-sec-swiper-next",
           prevEl: ".routes-sec-swiper-prev",
         },
+    autoplay: {
+      delay: 8000, 
+    },
       })
 
 const why_sec_swiper = new Swiper('.why_sec_swiper', {
@@ -209,7 +215,7 @@ fetchRate();
 
 
 // Function to convert currency
-    function convertCurrency(from, to) {
+function convertCurrency(from, to) {
         // Get the input values
         var sourceValue = parseFloat(document.querySelector('[name=' + from + ']').value) || 0;
 
@@ -230,10 +236,69 @@ fetchRate();
     convertCurrency('source', 'target');
 
     // Add event listeners for input changes
-    document.querySelector('[name=source]').addEventListener('input', function() {
+document.querySelector('[name=source]').addEventListener('input', function() {
         convertCurrency('source', 'target');
     });
 
-    document.querySelector('[name=target]').addEventListener('input', function() {
+document.querySelector('[name=target]').addEventListener('input', function() {
         convertCurrency('target', 'source');
     });
+
+
+function handleResponsiveTables() {
+  // Selecting all elements with class .my-table and .travel-guide-area-period-location-data-row
+  const tableElements = document.querySelectorAll('.my-table');
+  const responsiveRowElements = document.querySelectorAll('.travel-guide-area-period-location-data-row');
+
+  // Checking the screen width
+  const isResponsive = window.innerWidth < 992;
+
+  // Looping through each table and updating classes accordingly
+  tableElements.forEach((tableElement) => {
+      
+      // console.log(index);
+
+    if (isResponsive) {
+     tableElement.classList.add('responsive-table');
+      responsiveRowElements.forEach((rowElement) => {
+        rowElement.classList.add('is-responsive');
+        rowElement.classList.remove('is-not-responsive');
+      });
+    } else {
+      // When screen width is greater than or equal to 768px
+      tableElement.classList.remove('responsive-table');
+      responsiveRowElements.forEach((rowElement) => {
+        rowElement.classList.remove('is-responsive');
+        rowElement.classList.add('is-not-responsive');
+      });
+    }
+  });
+}
+
+// Initial call to set the initial state based on the screen width
+handleResponsiveTables();
+
+// Adding an event listener to handle changes in screen width
+window.addEventListener('resize', handleResponsiveTables);
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the scroll-to-top link element
+  const scrollTopLinks = document.querySelectorAll('.scrolltop');
+
+    scrollTopLinks.forEach((scrollTopLink)=>{
+        scrollTopLink.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+    });
+  // Add a click event listener to the link
+  
+});
+
+
+
