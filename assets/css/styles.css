@@ -8567,3 +8567,25 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
 }
 
+.eq-row .eq-img figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.eq-row .eq-img figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.eq-row .eq-img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
